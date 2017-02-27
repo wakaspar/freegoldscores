@@ -1,0 +1,23 @@
+body {
+  background: black; /* sanity check */
+}
+
+h1 {
+}
+
+.results {
+  color: white;
+}
+
+.jumbotron {
+  color: black;
+  font-family: 'Bungee Shade', sans-serif;
+  background-image: url('/public/images/stardust.png');
+}
+
+.jumbotron .scores {
+  font-family: 'Mr Dafoe', cursive;
+  text-shadow: 2px 2px black;
+  color: navajowhite;
+  font-size: 0.75em;
+}

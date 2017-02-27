@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html ng-app="freeGoldScores">
+  <head>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Shade|Monoton|Mr+Dafoe" rel="stylesheet">
+    <link rel="stylesheet" href="/public/styles/styles.css">
+
+    <!-- Vendor Scripts -->
+    <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-route.js"></script>
+
+    <!-- Application Scripts -->
+    <script src="/public/scripts/app.js"></script>
+    <script src="/public/scripts/controllers/MachineIndexController.js"></script>
+    <script src="/public/scripts/controllers/MachineShowController.js"></script>
+
+    <meta charset="utf-8">
+    <title>FreeGoldScores</title>
+  </head>
+
+  <body>
+    <div class="container-fluid jumbotron">
+      <h1>FreeGold<span class="scores">Scores</span></h1>
+    </div>  <!-- closes Jumbotron -->
+
+    <!-- ANGULAR VIEWPORT -->
+    <div ng-view></div>
+
+  </body>
+</html>
