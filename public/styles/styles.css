@@ -8,14 +8,28 @@ body {
   color: dodgerblue;
 }
 
-.machine-show{
+.machine-show, h1 {
   color: white;
   font-family: 'Bungee Shade', sans-serif;
+  font-size: 2em;
+}
+
+.machine-show, p {
+  color: navajowhite;
+  font-family: 'Audiowide';
   font-size: 1.5em;
 }
 
 .machine-info {
   color: dodgerblue;
+  font-family: 'Audiowide';
+  font-size: 1.5em;
+}
+
+.ipdb-link {
+  color: lightgreen;
+  font-family: 'Audiowide';
+  font-size: 1.5em;
 }
 
 .jumbotron {
