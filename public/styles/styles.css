@@ -2,17 +2,29 @@ body {
   background: black; /* sanity check */
 }
 
-h1 {
+.machine-index {
+  font-family: 'Audiowide', sans-serif;
+  text-decoration: none;
+  color: dodgerblue;
 }
 
-.results {
+.machine-show{
   color: white;
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 1.5em;
+}
+
+.machine-info {
+  color: dodgerblue;
 }
 
 .jumbotron {
+  background-image: url('/public/images/stardust.png');
+}
+
+.jumbotron h1 {
   color: black;
   font-family: 'Bungee Shade', sans-serif;
-  background-image: url('/public/images/stardust.png');
 }
 
 .jumbotron .scores {
@@ -20,4 +32,18 @@ h1 {
   text-shadow: 2px 2px black;
   color: navajowhite;
   font-size: 0.75em;
+}
+
+.year {
+  font-family: 'Mr Dafoe', cursive;
+  color: navajowhite;
+  font-size: 1.5em;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
 }

@@ -1,3 +1,6 @@
-<div class="container results">
-  <h2>I'm one machine!</h2>
+<div class="container">
+  <a class="machine-show" ng-href="/"><h1>{{ msc.machine.name }}</h1></a>
+  <p>★ <span class="machine-info">manufactured by:</span>  {{ msc.machine.manufacturer }}</p>
+  <p>★ <span class="machine-info">year released:</span>  {{ msc.machine.year }}</p>
+  <a href="{{ msc.machine.ipdb_link }}">{{ msc.machine.name }} IPDB link</a>
 </div>

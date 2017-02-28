@@ -14,7 +14,7 @@ function config($routeProvider, $locationProvider){
       controller: 'MachineIndexController',
       controllerAs: 'mic'
     })
-    .when( '/:id', {
+    .when( '/machine/:id', {
       templateUrl: '/views/templates/machineShow.html',
       controller: 'MachineShowController',
       controllerAs: 'msc'

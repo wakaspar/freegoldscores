@@ -1,3 +1,7 @@
-<div class="container results">
-  <h2>I'm all the machines!</h2>
+<div class="container">
+  <div ng-repeat="machine in mic.machineList | orderBy: 'name' " class="container clearfix">
+    <a ng-href="/machine/{{ machine.id }}"><h2 class="machine-index">{{ machine.name }}</h2></a>
+    <span class="year">{{ machine.year }}</span>
+    <hr>
+  </div>
 </div>
