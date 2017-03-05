@@ -1,0 +1,62 @@
+body {
+  background-image: url('/public/images/stardust.png');
+}
+
+.machine-index {
+  font-family: 'Audiowide', sans-serif;
+  text-decoration: none;
+  color: dodgerblue;
+}
+
+.machine-show {
+  color: navajowhite;
+  font-family: 'Audiowide';
+  font-size: 1.5em;
+}
+
+.machine-name {
+  color: dodgerblue;
+  font-family: 'Audiowide';
+  font-weight: 100;
+  font-size: 1.5em;
+  padding-top: 10px;
+  margin-left: 50px;
+}
+
+.ipdb-link {
+  color: lightgreen;
+  font-family: 'Audiowide';
+  font-size: 1.5em;
+}
+
+/*.jumbotron {
+  background-image: url('/public/images/stardust.png');
+}*/
+
+.jumbotron h1 {
+  color: black;
+  font-family: 'Bungee Shade', sans-serif;
+  font-size: 100px;
+}
+
+.jumbotron .scores {
+  font-family: 'Mr Dafoe', cursive;
+  text-shadow: 2px 2px black;
+  color: navajowhite;
+  font-size: 0.75em;
+}
+
+.year {
+  font-family: 'Mr Dafoe', cursive;
+  color: navajowhite;
+  font-size: 1.5em;
+  margin-right: 50px;
+}
+
+.clearfix:after {
+   content: " ";
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
