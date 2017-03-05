@@ -3,15 +3,19 @@
 
   <!-- Input Fields -->
   <div class="row">
-    <div class="input-field col s6">
-      <input id="initials" type="text" class="validate">
-      <label for="initials">Initials</label>
-    </div>
-    <div class="input-field col s6">
-      <input id="score" type="text" class="validate">
-      <label for="score">Score</label>
-    </div>
-    <a class="submit-btn waves-effect waves-light orange accent-4 btn-large"><i class="material-icons left">control_point</i>submit</a>
+    <form ng-submit="msc.onSubmit()">
+      <div class="input-field col s6">
+        <input id="initials" type="text" class="validate">
+        <label for="initials">Initials</label>
+      </div>
+      <div class="input-field col s6">
+        <input id="score" type="text" class="validate">
+        <label for="score">Score</label>
+      </div>
+      <button class="submit-btn btn-large orange accent-4 waves-effect waves-light" type="submit" name="action">Submit
+        <i class="material-icons right">control_point</i>
+      </button>
+    </form>
   </div>
 
   <!-- PreLoader -->

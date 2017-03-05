@@ -14,7 +14,6 @@ function MachineShowController($http, $routeParams, $location){
   var vm = this;
   var gameId = parseInt($routeParams.id);
   vm.dataLoaded = false;
-  console.log('data loaded:' , vm.dataLoaded);
 
   // GET MACHINE BY ID TO POPULATE PAGE //
   $http({
@@ -55,12 +54,21 @@ function MachineShowController($http, $routeParams, $location){
       console.log('highscoresjax', res.data);
       vm.highscores = res.data.machine_scores;
       vm.dataLoaded = true;
+
+
     }, function onError(res){
       console.log('hsfailsjax: ', res);
     }); // closes high scores $http
 
+
   }, function onError(res){
     console.log('failjax: ', res);
   }); // closes machine id $http
+
+  // Allows for submission of high scores //
+  vm.onSubmit = function(){
+    console.log('high score submitted!');
+  }
+
 
 } // closes MachineShowController
