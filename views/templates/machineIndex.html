@@ -9,7 +9,7 @@
     <span class="card-title machine-info">
       <i class="material-icons right">close</i>
       <a class="add-a-hs-btn grey darken-3 waves-effect waves-light btn-medium"
-        href="#addModal">add high score
+        ng-href="/machine/{{ machine.id }}">add high score
       </a>
       <p><span class="my-label">{{ machine.name }},
         </span> {{ machine.manufacturer }},
@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<div id="addModal" class="modal">
+<!-- <div id="addModal" class="modal">
    <div class="modal-content">
      <h4>Modal Header</h4>
      <p>A bunch of text</p>
@@ -29,5 +29,5 @@
    <div class="modal-footer">
      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
    </div>
- </div>
+ </div> -->
       <!--<a ng-href="/machine/{{ machine.id }}"></a>  goes to msc page-->

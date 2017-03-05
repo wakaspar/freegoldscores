@@ -32,7 +32,7 @@ body {
 
 .my-label {
   color: salmon;
-  font-weight: 100;
+  font-weight:
 }
 
 .ipdb-link {
@@ -44,6 +44,11 @@ body {
   font-family: 'Audiowide', sans-serif;
   border-radius: 10px;
   padding: 5px;
+  float: right;
+}
+
+.submit-btn {
+  border-radius: 25px;
   float: right;
 }
 
