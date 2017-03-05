@@ -10,8 +10,7 @@ angular
 
 // MIC //
 MachineIndexController.$inject = ['$http'];
-function MachineIndexController($http){
-  console.log("ima mic");
+function MachineIndexController($http){  
   var vm = this;
   vm.machineList = [];
 
@@ -21,7 +20,7 @@ function MachineIndexController($http){
   }).then(function onSuccess(res){
     // gets all machines //
     vm.machineList = res.data.machines;
-    console.log(vm.machineList);
+    //console.log('all FGW machines: ', vm.machineList);
   }, function onError(res){
     console.log('failjax: ', res);
   });

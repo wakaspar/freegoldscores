@@ -6,7 +6,7 @@ angular
 // CONFIG //
 config.$inject = ['$routeProvider', '$locationProvider'];
 function config($routeProvider, $locationProvider){
-  console.log('angular works!');
+  //console.log('angular works!');
 
   $routeProvider
     .when( '/', {

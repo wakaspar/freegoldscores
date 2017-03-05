@@ -6,11 +6,18 @@
 
     <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Audiowide|Bungee+Shade|Monoton|Mr+Dafoe" rel="stylesheet">
     <link rel="stylesheet" href="/public/styles/material.css">
     <!--<link rel="stylesheet" href="/public/styles/styles.css">-->
 
     <!-- Vendor Scripts -->
+    <script
+      src="https://code.jquery.com/jquery-3.1.1.min.js"
+      integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+      crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/js/materialize.min.js"></script>
     <script src="https://opensource.keycdn.com/angularjs/1.6.2/angular.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.2/angular-route.js"></script>
 
@@ -29,9 +36,12 @@
     </div>  <!-- closes Jumbotron -->
 
     <!-- ANGULAR VIEWPORT -->
-    <div ng-view></div>
+    <div ng-view class="container"></div>
 
 
+    <footer class="page-footer grey darken-4">
+      <p class="center-align grey-text">2017 ★ Wilbur</p>
+    </footer>
 
   </body>
 </html>

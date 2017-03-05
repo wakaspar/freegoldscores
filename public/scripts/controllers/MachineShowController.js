@@ -12,34 +12,55 @@ MachineShowController.$inject = ['$http', '$routeParams', '$location']
 function MachineShowController($http, $routeParams, $location){
 
   var vm = this;
-  var machineId = parseInt($routeParams.id);
+  var gameId = parseInt($routeParams.id);
+  vm.dataLoaded = false;
+  console.log('data loaded:' , vm.dataLoaded);
 
-  // GET MACHINE BY ID //
+  // GET MACHINE BY ID TO POPULATE PAGE //
   $http({
     method: 'GET',
     url: 'http://pinballmap.com/api/v1/locations/2405/machine_details.json'
   }).then(function onSuccess(res){
     vm.machineList = res.data.machines;
     vm.machineList.forEach(function(machine){
-      if (machine.id == machineId)
+      if (machine.id == gameId)
         vm.machine = machine;
     });
-    console.log('current machine: ', vm.machine);
+    console.log('current pin: ', vm.machine);
 
   }, function onError(res){
     console.log('failjax: ', res);
   }); // closes first $http
 
 
-  // GET HIGH SCORES BY MACHINE ID //
-  console.log('machineId: ', machineId);
+  // GET MACHINE ID FOR HIGH SCORES //
+  console.log('gameId: ', gameId);
   $http({
     method: 'GET',
-    url: 'http://pinballmap.com//api/v1/machine_score_xrefs/' + 'machineId' + '.json'
+    url: 'http://pinballmap.com/api/v1/region/bayarea/location_machine_xrefs.json',
   }).then(function onSuccess(res){
-    console.log('high scores: ', res.data);
+    var data = res.data.location_machine_xrefs;
+    data.forEach(function(pin){
+      if((pin.location_id === 2405) && (pin.machine.id === gameId)){
+        vm.pin = pin.id;
+      }
+    }); // closes data.forEach
+    console.log('current pin from all of bay: ', vm.pin.id);
+
+    // GET HIGH SCORES BY MACHINE ID //
+    $http({
+      method: 'GET',
+      url: 'http://pinballmap.com/api/v1/machine_score_xrefs/'+ vm.pin + '.json'
+    }).then(function onSuccess(res){
+      console.log('highscoresjax', res.data);
+      vm.highscores = res.data.machine_scores;
+      vm.dataLoaded = true;
+    }, function onError(res){
+      console.log('hsfailsjax: ', res);
+    }); // closes high scores $http
+
   }, function onError(res){
     console.log('failjax: ', res);
-  }); // closes second $http
+  }); // closes machine id $http
 
 } // closes MachineShowController
