@@ -1,16 +1,17 @@
 <div class="card black machine-show">
-  <a class="" ng-href="/"><h1>{{ msc.machine.name }}</h1></a>
+  <a class="" ng-href="/"><h1>{{ msc.pin.machine.name }}</h1></a>
 
   <!-- Input Fields -->
-  <div class="row">
-    <form ng-submit="msc.onSubmit()">
-      <div class="input-field col s6">
-        <input id="initials" type="text" class="validate">
+  <div ng-show="msc.dataLoaded" class="row">
+    <form class="form-group" ng-submit="msc.onSubmit()">
+      <div class="input-field col s6 form-group">
+        <input id="initials" type="text" ng-model="msc.newHighScore.initials" class="validate form-control">
         <label for="initials">Initials</label>
       </div>
-      <div class="input-field col s6">
-        <input id="score" type="text" class="validate">
+      <div class="input-field col s6 form-group">
+        <input id="score" type="text" ng-model="msc.newHighScore.score" class="form-control validate">
         <label for="score">Score</label>
+        <input type="hidden" name="gameId" ng-model="msc.newHighScore.location_machine_xref_id" value="msc.pin.id" class="validate form-control">
       </div>
       <button class="submit-btn btn-large orange accent-4 waves-effect waves-light" type="submit" name="action">Submit
         <i class="material-icons right">control_point</i>
@@ -19,17 +20,24 @@
   </div>
 
   <!-- PreLoader -->
-  <div ng-hide="msc.dataLoaded" class="progress">
-    <div class="indeterminate"></div>
+  <div ng-hide="msc.dataLoaded" class="center-align">
+    <h4 class="load-text"><span class="small">Please wait... </span> talking to pinballmaps</h4>
+    <div class="progress orange accent-3">
+      <div class="indeterminate  orange accent-4"></div>
+    </div>
   </div>
+
 
   <!-- High Scores -->
   <div ng-show="msc.dataLoaded">
     <p class="my-label" ng-show="!msc.highscores.length">no current high scores posted</p>
     <p class="my-label" ng-repeat="high in msc.highscores | orderBy: 'score' ">{{ high.initials }} : {{ high.score }}</p>
   </div>
-  <hr>
 
   <!-- IPDB Link -->
-  <a class="ipdb-link" href="{{ msc.machine.ipdb_link }}">{{ msc.machine.name }} IPDB link</a>
+  <div ng-show="msc.dataLoaded">
+    <hr>
+    <br>
+    <a class="ipdb-link" href="{{ msc.pin.machine.ipdb_link }}">{{ msc.pin.machine.name }} IPDB link</a>
+  </div>
 </div>
