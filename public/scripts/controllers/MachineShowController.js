@@ -32,7 +32,7 @@ function MachineShowController($http, $routeParams, $location){
 
 
 
-  // // GET MACHINE BY ID TO POPULATE PAGE //
+  // // GET MACHINE BY ID TO POPULATE PAGE -- GHOST CODE -- //
   // $http({
   //   method: 'GET',
   //   url: 'http://pinballmap.com/api/v1/locations/2405/machine_details.json'
